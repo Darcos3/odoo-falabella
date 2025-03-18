@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view">
+        <field name="name">sync.form.view</field>
+        <field name="model">sync.model</field>
+        <field name="arch" type="xml">
+            <button id="importar" type="object" string="Importar" class="btn-primary"/>
+        </field>
+    </record>
+
+    <record id="action_sync" model="ir.actions.act_window">
+        <field name="name">Sync</field>
+        <field name="res_model">sync</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="menu_mi_modelo" name="Sync" action="action_sync" parent="base.point_of_sale"/>
+
+</odoo>
